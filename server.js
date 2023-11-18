@@ -5,11 +5,13 @@ import ImportData from "./DataImport.js";
 import productRoute from "./Routes/ProductRoute.js";
 import { errorHandler, notFound } from "./Middleware/Errors.js";
 import userRouter from "./Routes/Userroutes.js";
+import cors from "cors";
 
 dotenv.config();
 connectDatabase();
 const app = express()
 app.use(express.json());
+app.use(cors());
 
 app.use("/api/import", ImportData);
 app.use("/api/products", productRoute);
