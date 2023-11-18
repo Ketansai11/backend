@@ -4,7 +4,7 @@ import connectDatabase from "./config/MongoDb.js";
 import ImportData from "./DataImport.js";
 import productRoute from "./Routes/ProductRoute.js";
 import { errorHandler, notFound } from "./Middleware/Errors.js";
-import userRouter from "./Routes/Userroutes.js";
+import userRouter from "./Routes/UserRoutes.js";
 import cors from "cors";
 
 dotenv.config();
